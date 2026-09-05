@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>His Life, His Voice | RSVP</title>
+    <meta name="description" content="RSVP for Rev. Fr. John A. De Castro, OSJ's 60th thanksgiving celebration." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Italiana&family=Parisienne&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="opening" id="opening" aria-labelledby="openingTitle">
+      <div class="opening-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="opening-frame">
+        <p class="opening-kicker">A thanksgiving celebration</p>
+        <div class="opening-mark" aria-hidden="true">❦</div>
+        <h1 id="openingTitle">A life of grace,<br /><em>a voice of faith.</em></h1>
+        <p class="opening-copy">You are warmly invited to celebrate<br />a remarkable 60-year journey.</p>
+        <button class="open-invitation" id="openInvitation" type="button">Open invitation <span>✦</span></button>
+        <p class="opening-hint">Tap to begin</p>
+      </div>
+    </section>
+    <main class="invitation" aria-label="Event invitation">
+      <div class="gold-border" aria-hidden="true"></div>
+      <div class="corner corner-top" aria-hidden="true">❦</div>
+      <div class="corner corner-bottom" aria-hidden="true">❦</div>
+      <div class="ribbon ribbon-top" aria-hidden="true"></div>
+      <div class="ribbon ribbon-bottom" aria-hidden="true"></div>
+
+      <section class="content">
+        <p class="eyebrow"><span></span> A Thanksgiving Celebration <span></span></p>
+        <h1>His Life,<br /><em>His Voice</em></h1>
+        <div class="title-rule" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="honoree">Rev. Fr. John A. De Castro, OSJ</p>
+        <div class="ornament small" aria-hidden="true">— ❦ —</div>
+        <p class="years"><strong>60</strong><i>years of</i></p>
+        <p class="values">Faith, Family,<br />Friendship and Love</p>
+        <div class="line" aria-hidden="true"></div>
+        <p class="date">October 2, 2026 <b>|</b> 10:30 AM</p>
+        <p class="detail">Thanksgiving Mass</p>
+        <p class="venue">Grand Pavilion Pallazo de Ibaan<br />Talaibon, Ibaan, Batangas</p>
+        <div class="line short" aria-hidden="true"></div>
+        <p class="dress">Guests' Motif or Dress:<br /><strong>White or Blue</strong></p>
+
+        <button class="rsvp-button" id="openRsvp" type="button">Confirm attendance <span>→</span></button>
+        <p class="rsvp-note">Kindly reply at your earliest convenience.</p>
+      </section>
+    </main>
+
+    <section class="event-details" aria-labelledby="detailsTitle">
+      <div class="details-card">
+        <p class="section-kicker">Celebrate with us</p>
+        <h2 id="detailsTitle">Event Details</h2>
+        <div class="schedule" aria-label="Event schedule">
+          <div class="schedule-item"><time>10:30 AM</time><span>Thanksgiving Mass</span></div>
+          <div class="schedule-item"><time>12:00 NN</time><span>Fellowship Lunch</span></div>
+          <div class="schedule-item"><time>1:00 PM</time><span>Celebration &amp; Sharing</span></div>
+        </div>
+        <p class="day">Friday, October 2, 2026</p>
+        <div class="venue-gallery">
+          <img src="./assets/ibaans.jpg" alt="Grand Pavilion Pallazo de Ibaan" loading="lazy" />
+          <a href="https://www.google.com/maps/search/?api=1&query=Grand%20Pavilion%20Pallazo%20de%20Ibaan%2C%20Talaibon%2C%20Ibaan%2C%20Batangas" target="_blank" rel="noreferrer">View on Maps</a>
+        </div>
+        <p class="venue-name">Grand Pavilion Pallazo de Ibaan<br />Talaibon, Ibaan, Batangas</p>
+        <button class="details-rsvp" id="detailsRsvp" type="button">RSVP now <span>→</span></button>
+      </div>
+    </section>
+
+    <div class="modal" id="rsvpModal" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-card">
+        <button class="close" type="button" aria-label="Close RSVP form" data-close-modal>×</button>
+        <p class="modal-kicker">His Life, His Voice</p>
+        <h2 id="rsvpTitle">Will you join us?</h2>
+        <p class="modal-copy">We would be honored to celebrate this milestone with you.</p>
+        <form id="rsvpForm">
+          <label>
+            Your name
+            <input name="name" autocomplete="name" required placeholder="Full name" />
+          </label>
+          <label>
+            Are you able to attend?
+            <select name="attendance" required>
+              <option value="">Select an answer</option>
+              <option>Joyfully attending</option>
+              <option>Regretfully declining</option>
+            </select>
+          </label>
+          <label>
+            Number of guests
+            <select name="guests" required>
+              <option value="">Select number</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5+">5+</option>
+            </select>
+          </label>
+          <label>
+            Message <span class="optional">(optional)</span>
+            <textarea name="message" rows="3" placeholder="A short note for Father John"></textarea>
+          </label>
+          <button class="submit" type="submit">Send RSVP</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
